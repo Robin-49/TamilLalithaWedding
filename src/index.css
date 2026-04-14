@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Kavivanar&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 20 10% 20%;
+
+    --card: 40 30% 94%;
+    --card-foreground: 20 10% 20%;
+
+    --popover: 40 33% 96%;
+    --popover-foreground: 20 10% 20%;
+
+    --primary: 140 20% 45%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 30 30% 85%;
+    --secondary-foreground: 20 10% 25%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 20 8% 50%;
+
+    --accent: 15 40% 60%;
+    --accent-foreground: 40 33% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 140 20% 45%;
+
+    --radius: 0.75rem;
+
+    --ivory: 40 33% 96%;
+    --sage: 140 20% 45%;
+    --sage-light: 140 15% 85%;
+    --sand: 35 30% 80%;
+    --terracotta: 15 40% 60%;
+    --terracotta-light: 15 35% 85%;
+
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lato', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply w-full flex justify-center items-center py-8;
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-element-slow {
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .floating-element-fast {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+@keyframes kolam-draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.kolam-animate path {
+  stroke-dasharray: 1000;
+  animation: kolam-draw 4s ease-in-out forwards;
+}
+
+@keyframes gentle-pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.gentle-pulse {
+  animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+/* Global Tamil Font Override */
+.font-tamil,
+.font-tamil *,
+.font-tamil h1,
+.font-tamil h2,
+.font-tamil h3,
+.font-tamil h4,
+.font-tamil h5,
+.font-tamil h6,
+.font-tamil p,
+.font-tamil span,
+.font-tamil div,
+.font-tamil button {
+  font-family: 'Kavivanar', cursive !important;
+}
