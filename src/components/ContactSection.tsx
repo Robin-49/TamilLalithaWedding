@@ -32,7 +32,7 @@ const ContactSection = () => {
         </motion.p>
         <motion.h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-light text-foreground mb-16"
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }}>
-          {t("contact")} 💒
+          {t("contact")}
         </motion.h2>
 
         <div className="grid sm:grid-cols-2 gap-6">
