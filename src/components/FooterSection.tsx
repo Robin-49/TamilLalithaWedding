@@ -18,7 +18,8 @@ const FooterSection = () => {
           initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.3 }} />
         <p className="font-heading text-2xl sm:text-3xl text-foreground mb-4 font-light">{t("withLove")}</p>
         <p className="text-sm text-muted-foreground font-body leading-relaxed mb-2">{t("families")}</p>
-        <p className="text-xs text-muted-foreground/60 font-body mt-12 tracking-wider">{t("footerNamesDate")}</p>
+        <p className="text-sm text-muted-foreground font-body mt-12 italic">{t("footerThankYou")}</p>
+        <p className="text-[10px] text-muted-foreground/50 font-body mt-4 tracking-[0.1em] uppercase">{t("footerCopyright")}</p>
       </motion.div>
     </footer>
   );

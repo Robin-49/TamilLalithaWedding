@@ -52,7 +52,8 @@ export const translations: Translations = {
   muhurtamTiming: { en: "7:30 AM — 9:00 AM", ta: "காலை 7:30 — 9:00" },
   brideFatherName: { en: "Mr. Kumar", ta: "திரு. குமார்" },
   groomFatherName: { en: "Mr. Velu", ta: "திரு. வேலு" },
-  footerNamesDate: { en: "Tamilarasan & Lalitha · June 2026", ta: "தமிழரசன் & லலிதா · ஜூன் 2026" },
+  footerThankYou: { en: "Thank you for being a part of our special day", ta: "எங்கள் சிறப்பு தினத்தின் ஒரு பகுதியாக இருந்ததற்கு நன்றி" },
+  footerCopyright: { en: "© 2026 | Made with 🤍 by Tamilarasan & Lalitha", ta: "© 2026 | தமிழரசன் & லலிதாவின் அன்புடன் உருவாக்கப்பட்டது" },
   initials: { en: "T&L", ta: "த&ல" },
 };
 
