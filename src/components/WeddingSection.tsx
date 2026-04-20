@@ -18,7 +18,7 @@ const WeddingSection = () => {
       </motion.div>
 
       <motion.div className="relative z-10 max-w-3xl mx-auto px-6 text-center" style={{ scale }}>
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("sacredUnion")}
         </motion.p>
@@ -26,26 +26,26 @@ const WeddingSection = () => {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }}>
           {t("muhurtam")}
         </motion.h2>
-        <motion.div className="w-16 h-px bg-sage/40 mx-auto mb-12"
+        <motion.div className="w-16 h-px bg-blush/40 mx-auto mb-12"
           initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.4 }} />
 
-        <motion.div className="bg-card/40 backdrop-blur-sm border border-sage/20 rounded-xl p-10 md:p-14"
+        <motion.div className="bg-card/40 backdrop-blur-sm border border-blush/20 rounded-xl p-10 md:p-14"
           initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.5 }}>
           <div className="space-y-8">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage font-body mb-2">{t("date")}</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-blush font-body mb-2">{t("date")}</p>
               <p className="font-heading text-3xl text-foreground">June 4, 2026</p>
               <p className="text-sm text-muted-foreground font-body mt-1">{t("sunday")}</p>
             </div>
-            <div className="w-12 h-px bg-terracotta/30 mx-auto" />
+            <div className="w-12 h-px bg-plum/30 mx-auto" />
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage font-body mb-2">{t("muhurtamTime")}</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-blush font-body mb-2">{t("muhurtamTime")}</p>
               <p className="font-heading text-3xl text-foreground">9:15 AM — 10:30 AM</p>
               <p className="text-sm text-muted-foreground font-body mt-1">{t("shubhMuhurat")}</p>
             </div>
-            <div className="w-12 h-px bg-terracotta/30 mx-auto" />
+            <div className="w-12 h-px bg-plum/30 mx-auto" />
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage font-body mb-2">{t("venue")}</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-blush font-body mb-2">{t("venue")}</p>
               <p className="font-heading text-3xl text-foreground">{t("weddingVenue")}</p>
               <p className="text-sm text-muted-foreground font-body mt-1">{t("weddingAddress")}</p>
             </div>

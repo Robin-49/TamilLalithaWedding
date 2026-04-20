@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Volume2, VolumeX, MessageCircle } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
-const WHATSAPP_NUMBER = "919876543210";
+const WHATSAPP_NUMBER = "919677970480";
 const WHATSAPP_MSG = encodeURIComponent("Hello! We'd love to know more about the wedding.");
 
 const FixedButtons = () => {
@@ -12,14 +12,14 @@ const FixedButtons = () => {
 
   useEffect(() => {
     // Create audio element with a royalty-free Carnatic-style loop
-    const audio = new Audio("/Jinguchaa_Instrumental.mp3");
+    const audio = new Audio("/Mangalyam-Tantunanena.mp3");
     audio.loop = true;
     audio.volume = 0.3;
     audioRef.current = audio;
 
     // Autoplay on first user interaction
     const play = () => {
-      audio.play().then(() => setAudioReady(true)).catch(() => {});
+      audio.play().then(() => setAudioReady(true)).catch(() => { });
       document.removeEventListener("click", play);
       document.removeEventListener("scroll", play);
       document.removeEventListener("touchstart", play);
@@ -43,7 +43,7 @@ const FixedButtons = () => {
   const toggleMute = () => {
     if (!audioRef.current) return;
     if (muted) {
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play().catch(() => { });
       audioRef.current.volume = 0.3;
     } else {
       audioRef.current.pause();
@@ -56,7 +56,7 @@ const FixedButtons = () => {
       {/* Music button - bottom left */}
       <motion.button
         onClick={toggleMute}
-        className="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full border border-sage/40 bg-card/60 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-card/80 transition-colors shadow-lg"
+        className="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full border border-blush/40 bg-card/60 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-card/80 transition-colors shadow-lg"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2 }}

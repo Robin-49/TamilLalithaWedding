@@ -17,7 +17,7 @@ const ReceptionSection = () => {
       </motion.div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("celebration")}
         </motion.p>
@@ -37,7 +37,7 @@ const ReceptionSection = () => {
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}
               whileHover={{ y: -4, transition: { duration: 0.3 } }}>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage font-body mb-3">{item.label}</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-blush font-body mb-3">{item.label}</p>
               <p className="font-heading text-2xl text-foreground mb-1">{item.value}</p>
               <p className="text-sm text-muted-foreground font-body">{item.sub}</p>
             </motion.div>

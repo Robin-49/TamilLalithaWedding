@@ -13,7 +13,7 @@ const MapSection = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4 text-center"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4 text-center"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("findUs")}
         </motion.p>
@@ -32,7 +32,7 @@ const MapSection = () => {
                 href="https://maps.app.goo.gl/DEPyvmmqpm2FdqoY7" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-xs tracking-[0.2em] font-body text-terracotta hover:text-terracotta/80 uppercase transition-colors"
+                className="inline-block mt-4 text-xs tracking-[0.2em] font-body text-plum hover:text-plum/80 uppercase transition-colors"
               >
                 {t("findUs")} →
               </a>

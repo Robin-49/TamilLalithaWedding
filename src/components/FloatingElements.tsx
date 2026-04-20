@@ -3,48 +3,48 @@ import { motion } from "framer-motion";
 const FloatingElements = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
-      {/* Jasmine petals */}
-      {[...Array(6)].map((_, i) => (
+      {/* Sakura petals */}
+      {[...Array(15)].map((_, i) => (
         <motion.div
-          key={`jasmine-${i}`}
-          className="absolute w-3 h-3 rounded-full bg-sand opacity-40"
+          key={`sakura-${i}`}
+          className="absolute bg-gradient-to-br from-sakura to-blush opacity-60"
           style={{
-            left: `${15 + i * 15}%`,
-            top: `${10 + i * 12}%`,
+            width: `${Math.random() * 8 + 8}px`,
+            height: `${Math.random() * 10 + 12}px`,
+            borderRadius: "100% 0 100% 0", // Petal shape
+            left: `${Math.random() * 100}%`,
+            top: -20,
           }}
           animate={{
-            y: [0, -20, 5, -15, 0],
-            x: [0, 10, -5, 8, 0],
-            rotate: [0, 45, -20, 30, 0],
-            opacity: [0.2, 0.5, 0.3, 0.4, 0.2],
+            y: ["0vh", "110vh"],
+            x: [0, Math.random() * 100 - 50, Math.random() * 100 - 50],
+            rotate: [0, 180, 360],
           }}
           transition={{
-            duration: 8 + i * 2,
+            duration: Math.random() * 10 + 15,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 1.5,
+            ease: "linear",
+            delay: Math.random() * 20,
           }}
         />
       ))}
 
-      {/* Leaf accents */}
+      {/* Gentle glow accents */}
       <motion.div
-        className="absolute -left-8 top-1/4 w-24 h-40 opacity-10"
+        className="absolute -left-12 top-1/4 w-32 h-64 opacity-[0.08]"
         style={{
-          background: "linear-gradient(135deg, hsl(var(--sage)) 0%, transparent 100%)",
-          borderRadius: "0 100% 100% 0",
+          background: "radial-gradient(ellipse at center, hsl(var(--rose)) 0%, transparent 70%)",
         }}
-        animate={{ rotate: [0, 3, -2, 0], y: [0, -10, 5, 0] }}
+        animate={{ opacity: [0.05, 0.12, 0.05], scale: [1, 1.1, 1] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute -right-8 top-2/3 w-24 h-40 opacity-10"
+        className="absolute -right-12 top-2/3 w-40 h-80 opacity-[0.08]"
         style={{
-          background: "linear-gradient(225deg, hsl(var(--sage)) 0%, transparent 100%)",
-          borderRadius: "100% 0 0 100%",
+          background: "radial-gradient(ellipse at center, hsl(var(--sakura)) 0%, transparent 70%)",
         }}
-        animate={{ rotate: [0, -3, 2, 0], y: [0, 10, -5, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ opacity: [0.05, 0.12, 0.05], scale: [1, 1.2, 1] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
     </div>
   );

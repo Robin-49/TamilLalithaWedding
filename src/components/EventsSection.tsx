@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, CalendarPlus } from "lucide-react";
 import { useLanguage } from "./LanguageContext";
-import bananaLeaf from "@/assets/banana-leaf.jpg";
+import celebrationBg from "@/assets/celebration-bg.png";
 
 const MAPS_URL = "https://maps.app.goo.gl/DEPyvmmqpm2FdqoY7";
 const VENUE_NAME = "Uma Murugan Thirumana Maaligai (A/C)";
@@ -74,13 +74,13 @@ const EventsSection = () => {
   return (
     <section ref={ref} className="relative min-h-screen py-24 overflow-hidden flex flex-col justify-center">
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
-        <img src={bananaLeaf} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <img src={celebrationBg} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[3px]" />
       </motion.div>
 
       {/* Section header */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 w-full mb-12 text-center">
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("celebration")}
         </motion.p>
@@ -99,7 +99,7 @@ const EventsSection = () => {
         <motion.div
           className="bg-card/40 backdrop-blur-md border border-primary/20 rounded-2xl p-8 md:p-10 shadow-sm flex flex-col gap-6"
           initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.4 }}>
-          <p className="text-xs tracking-[0.3em] uppercase text-terracotta font-body text-center">{t("reception")}</p>
+          <p className="text-xs tracking-[0.3em] uppercase text-plum font-body text-center">{t("reception")}</p>
 
           <div className="space-y-5 text-center flex-1">
             <div>
@@ -116,13 +116,13 @@ const EventsSection = () => {
             {/* Location */}
             <div>
               <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-body mb-2">{t("venue")}</p>
-              <p className="text-sm text-foreground font-body font-medium leading-snug">{t("weddingVenue")}</p>
+              <p className="text-sm text-foreground font-body font-light leading-snug">{t("weddingVenue")}</p>
               <p className="text-xs text-muted-foreground font-body mt-1">{t("weddingAddress")}</p>
               <a
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 mt-3 text-xs text-terracotta hover:text-terracotta/80 font-body uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-1 mt-3 text-xs text-plum hover:text-plum/80 font-body uppercase tracking-wider transition-colors"
               >
                 <MapPin className="w-3 h-3" /> {t("findUs")}
               </a>
@@ -141,7 +141,7 @@ const EventsSection = () => {
                 `Reception at ${VENUE_NAME}, ${VENUE_ADDRESS}`
               )
             }
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-sage/40 text-sage hover:bg-sage/10 text-xs tracking-[0.2em] uppercase font-body transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-plum/40 text-plum hover:bg-plum/10 text-xs tracking-[0.2em] uppercase font-body transition-colors font-medium"
           >
             <CalendarPlus className="w-4 h-4" />
             Add to Calendar
@@ -152,7 +152,7 @@ const EventsSection = () => {
         <motion.div
           className="bg-card/40 backdrop-blur-md border border-primary/20 rounded-2xl p-8 md:p-10 shadow-sm flex flex-col gap-6"
           initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.6 }}>
-          <p className="text-xs tracking-[0.3em] uppercase text-terracotta font-body text-center">{t("muhurtam")}</p>
+          <p className="text-xs tracking-[0.3em] uppercase text-plum font-body text-center">{t("muhurtam")}</p>
 
           <div className="space-y-5 text-center flex-1">
             <div>
@@ -170,13 +170,13 @@ const EventsSection = () => {
             {/* Location */}
             <div>
               <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-body mb-2">{t("venue")}</p>
-              <p className="text-sm text-foreground font-body font-medium leading-snug">{t("weddingVenue")}</p>
+              <p className="text-sm text-foreground font-body font-light leading-snug">{t("weddingVenue")}</p>
               <p className="text-xs text-muted-foreground font-body mt-1">{t("weddingAddress")}</p>
               <a
                 href={MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 mt-3 text-xs text-terracotta hover:text-terracotta/80 font-body uppercase tracking-wider transition-colors"
+                className="inline-flex items-center gap-1 mt-3 text-xs text-plum hover:text-plum/80 font-body uppercase tracking-wider transition-colors"
               >
                 <MapPin className="w-3 h-3" /> {t("findUs")}
               </a>
@@ -195,7 +195,7 @@ const EventsSection = () => {
                 `Wedding Muhurtam at ${VENUE_NAME}, ${VENUE_ADDRESS}`
               )
             }
-            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-sage/40 text-sage hover:bg-sage/10 text-xs tracking-[0.2em] uppercase font-body transition-colors"
+            className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-plum/40 text-plum hover:bg-plum/10 text-xs tracking-[0.2em] uppercase font-body transition-colors font-medium"
           >
             <CalendarPlus className="w-4 h-4" />
             Add to Calendar

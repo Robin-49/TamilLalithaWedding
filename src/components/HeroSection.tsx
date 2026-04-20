@@ -15,11 +15,11 @@ const HeroSection = () => {
     <section ref={ref} className="relative h-screen overflow-hidden">
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <img src={heroImage} alt="" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blush/40 to-background/90 backdrop-blur-[1px]" />
       </motion.div>
 
       <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none">
-        <motion.svg viewBox="0 0 400 400" className="w-[500px] h-[500px] opacity-[0.06] text-sage"
+        <motion.svg viewBox="0 0 400 400" className="w-[500px] h-[500px] opacity-[0.06] text-blush"
           initial={{ rotate: 0 }} animate={{ rotate: 360 }} transition={{ duration: 120, repeat: Infinity, ease: "linear" }}>
           {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
             <motion.ellipse key={angle} cx="200" cy="200" rx="150" ry="40" fill="none" stroke="currentColor" strokeWidth="0.5"
@@ -30,7 +30,7 @@ const HeroSection = () => {
       </div>
 
       <motion.div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center" style={{ y: textY, opacity }}>
-        <motion.p className="text-sm tracking-[0.3em] uppercase text-foreground font-medium mb-6"
+        <motion.p className="text-sm tracking-[0.3em] uppercase text-foreground font-light mb-6"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
           {t("togetherWithFamilies")}
         </motion.p>
@@ -46,14 +46,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.9 }}>
           {t("brideName")}
         </motion.h1>
-        <motion.p className="mt-8 text-base tracking-[0.2em] text-foreground font-body font-medium"
+        <motion.p className="mt-8 text-base tracking-[0.2em] text-foreground font-body font-light"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }}>
           {t("heroDate")}
         </motion.p>
 
         <motion.div className="absolute bottom-12 left-1/2 -translate-x-1/2"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }}>
-          <motion.div className="w-px h-16 bg-sage/30 mx-auto"
+          <motion.div className="w-px h-16 bg-blush/30 mx-auto"
             animate={{ scaleY: [1, 0.5, 1] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} />
           <p className="text-xs tracking-[0.2em] text-foreground/80 mt-2 uppercase">{t("scroll")}</p>
         </motion.div>

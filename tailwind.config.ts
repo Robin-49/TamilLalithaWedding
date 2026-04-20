@@ -25,15 +25,16 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        ivory: "hsl(var(--ivory))",
-        sage: {
-          DEFAULT: "hsl(var(--sage))",
-          light: "hsl(var(--sage-light))",
+        cream: "hsl(var(--cream))",
+        blush: {
+          DEFAULT: "hsl(var(--blush))",
+          light: "hsl(var(--blush-light))",
         },
-        sand: "hsl(var(--sand))",
-        terracotta: {
-          DEFAULT: "hsl(var(--terracotta))",
-          light: "hsl(var(--terracotta-light))",
+        sakura: "hsl(var(--sakura))",
+        rose: "hsl(var(--rose))",
+        plum: {
+          DEFAULT: "hsl(var(--plum))",
+          light: "hsl(var(--plum-light))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

@@ -6,42 +6,43 @@
 
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 20 10% 20%;
+    --background: 12 100% 98%;
+    --foreground: 333 18% 36%;
 
-    --card: 40 30% 94%;
-    --card-foreground: 20 10% 20%;
+    --card: 353 58% 97%;
+    --card-foreground: 333 18% 36%;
 
-    --popover: 40 33% 96%;
-    --popover-foreground: 20 10% 20%;
+    --popover: 12 100% 98%;
+    --popover-foreground: 333 18% 36%;
 
-    --primary: 140 20% 45%;
-    --primary-foreground: 40 33% 96%;
+    --primary: 0 60% 77%;
+    --primary-foreground: 12 100% 98%;
 
-    --secondary: 30 30% 85%;
-    --secondary-foreground: 20 10% 25%;
+    --secondary: 359 74% 87%;
+    --secondary-foreground: 333 18% 36%;
 
-    --muted: 35 20% 90%;
-    --muted-foreground: 20 8% 50%;
+    --muted: 359 40% 94%;
+    --muted-foreground: 333 10% 50%;
 
-    --accent: 15 40% 60%;
-    --accent-foreground: 40 33% 96%;
+    --accent: 353 58% 92%;
+    --accent-foreground: 333 18% 36%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 140 20% 45%;
+    --border: 359 40% 90%;
+    --input: 359 40% 90%;
+    --ring: 0 60% 77%;
 
     --radius: 0.75rem;
 
-    --ivory: 40 33% 96%;
-    --sage: 140 20% 45%;
-    --sage-light: 140 15% 85%;
-    --sand: 35 30% 80%;
-    --terracotta: 15 40% 60%;
-    --terracotta-light: 15 35% 85%;
+    --cream: 12 100% 98%;
+    --blush: 353 58% 92%;
+    --blush-light: 353 58% 96%;
+    --sakura: 359 74% 87%;
+    --rose: 0 60% 77%;
+    --plum: 333 18% 36%;
+    --plum-light: 333 18% 46%;
 
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Lato', sans-serif;

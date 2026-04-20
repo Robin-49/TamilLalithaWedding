@@ -7,7 +7,7 @@ const KolamSeparator = () => {
         width="200"
         height="40"
         viewBox="0 0 200 40"
-        className="text-sage opacity-40"
+        className="text-blush opacity-40"
         initial={{ pathLength: 0, opacity: 0 }}
         whileInView={{ pathLength: 1, opacity: 1 }}
         viewport={{ once: true }}
@@ -17,7 +17,7 @@ const KolamSeparator = () => {
           d="M10 20 Q30 5 50 20 Q70 35 90 20 Q110 5 130 20 Q150 35 170 20 Q190 5 190 20"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="0.75"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: true }}

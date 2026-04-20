@@ -10,6 +10,7 @@ import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import FixedButtons from "@/components/FixedButtons";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
+import { useCinematicScroll } from "@/hooks/useCinematicScroll";
 
 const Index = () => {
   return (
@@ -19,6 +20,12 @@ const Index = () => {
   );
 };
 
+// Sits INSIDE SmoothScroll so it can access LenisContext
+const CinematicScrollTrigger = () => {
+  useCinematicScroll();
+  return null;
+};
+
 const IndexContent = () => {
   const { lang } = useLanguage();
   const isTamil = lang === "ta";
@@ -26,6 +33,7 @@ const IndexContent = () => {
   return (
     <div className={isTamil ? 'font-tamil' : ''}>
       <SmoothScroll>
+        <CinematicScrollTrigger />
         <FloatingElements />
         <TopBar />
         <FixedButtons />

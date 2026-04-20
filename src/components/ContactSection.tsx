@@ -5,13 +5,13 @@ import contactBg from "@/assets/contact-bg.png";
 const contacts = [
   {
     familyKey: "brideFamily",
-    nameKey: "brideFatherName",
-    phone: "+91 98765 43210",
+    nameKey: "brideName",
+    phone: "+91 90803 83053",
   },
   {
     familyKey: "groomFamily",
-    nameKey: "groomFatherName",
-    phone: "+91 98765 43211",
+    nameKey: "groomName",
+    phone: "+91 96779 70480",
   },
 ];
 
@@ -21,12 +21,12 @@ const ContactSection = () => {
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img src={contactBg} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover blur-md scale-105" />
-        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+        <img src={contactBg} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover scale-105" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("getInTouch")} 💍
         </motion.p>
@@ -41,7 +41,7 @@ const ContactSection = () => {
               className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-8"
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}>
-              <p className="text-xs tracking-[0.3em] uppercase text-sage font-body mb-3">{t(c.familyKey)} 💑</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-plum font-body font-medium mb-3">{t(c.familyKey)} 💑</p>
               <p className="font-heading text-2xl text-foreground mb-4">{t(c.nameKey)}</p>
               <div className="space-y-2">
                 <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-body">

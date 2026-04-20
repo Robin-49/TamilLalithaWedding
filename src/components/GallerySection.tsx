@@ -35,7 +35,7 @@ const GallerySection = () => {
       {/* Section header */}
       <div className="text-center mb-14 px-6">
         <motion.p
-          className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+          className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.8 }}
         >
@@ -74,16 +74,19 @@ const GallerySection = () => {
               transition={{ duration: 0.6, delay: (i % 4) * 0.08 }}
               onClick={() => setLightboxIndex(i)}
             >
-              <img
+              <motion.img
                 src={src}
                 alt={`Wedding photo ${i + 1}`}
                 loading="lazy"
+                initial={{ filter: "blur(8px)" }}
+                whileInView={{ filter: "blur(0px)" }}
+                transition={{ duration: 0.8 }}
                 className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
               />
 
               {/* Hover overlay */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-4"
+                className="absolute inset-0 bg-gradient-to-t from-rose/60 via-sakura/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-4"
               >
                 <div className="w-8 h-8 ml-auto rounded-full bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

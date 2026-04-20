@@ -1,27 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
+import { LenisContext } from "./LenisContext";
 
 const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const rafRef = useRef<number | null>(null);
+
   useEffect(() => {
-    const lenis = new Lenis({
+    const lenisInstance = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
+    setLenis(lenisInstance);
+
     function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+      lenisInstance.raf(time);
+      rafRef.current = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafRef.current = requestAnimationFrame(raf);
 
     return () => {
-      lenis.destroy();
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      lenisInstance.destroy();
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <LenisContext.Provider value={lenis}>
+      {children}
+    </LenisContext.Provider>
+  );
 };
 
 export default SmoothScroll;

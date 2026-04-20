@@ -39,7 +39,7 @@ const CountdownSection = () => {
       </div>
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-        <motion.p className="text-xs tracking-[0.4em] uppercase text-terracotta font-body mb-4"
+        <motion.p className="text-xs tracking-[0.4em] uppercase text-plum font-body mb-4"
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           {t("countdown")}
         </motion.p>
