@@ -48,14 +48,14 @@ const CountdownSection = () => {
           {t("theWedding")}
         </motion.h2>
 
-        <div className="grid grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid grid-cols-4 gap-1.5 sm:gap-6">
           {units.map((unit, i) => (
             <motion.div key={unit.label}
-              className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 sm:p-6"
+              className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl px-1 py-3 sm:p-6"
               initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 + i * 0.1 }}>
               <p className="font-heading text-3xl sm:text-5xl md:text-6xl text-foreground">{String(unit.value).padStart(2, "0")}</p>
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mt-2">{unit.label}</p>
+              <p className="text-[9px] sm:text-xs tracking-normal sm:tracking-[0.2em] uppercase text-muted-foreground font-body mt-2">{unit.label}</p>
             </motion.div>
           ))}
         </div>

@@ -47,17 +47,19 @@ export function useCinematicScroll() {
     const triggerScroll = () => {
       if (cancelled) return;
 
-      const target = document.documentElement.scrollHeight - window.innerHeight;
-      if (target <= 0) return;
+      const currentHeight = document.documentElement.scrollHeight;
+      const target = currentHeight + 2000; // Add 2000px buffer to ensure it reaches absolute bottom
+      if (currentHeight <= window.innerHeight) return;
 
       addListeners();
 
       // Use Lenis native scrollTo — perfectly synced with its rAF loop
       // Dynamically calculate duration based on height so speed is always perfect
-      const duration = Math.max(15, target / 200); 
+      // Slightly slower speed (150 instead of 200) for better cinematic feel
+      const duration = Math.max(15, currentHeight / 150);
 
       lenis.scrollTo(target, {
-        duration,             // adjust duration based on full height
+        duration,
         easing: (t: number) =>
           t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
         onComplete: () => removeListeners(),

@@ -66,12 +66,17 @@ const GallerySection = () => {
         >
           {images.map((src, i) => (
             <motion.div
-              key={i}
-              className="relative mb-4 break-inside-avoid overflow-hidden rounded-xl cursor-pointer group shadow-md hover:shadow-xl transition-shadow duration-500"
+              key={src}
+              className="relative mb-4 break-inside-avoid overflow-hidden rounded-xl cursor-pointer group shadow-md hover:shadow-xl transition-shadow duration-500 transform-gpu bg-card/30"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-30px" }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: (i % 4) * 0.08 }}
+              style={{ 
+                willChange: "transform, opacity",
+                backfaceVisibility: "hidden",
+                transform: "translateZ(0)"
+              } as any}
               onClick={() => setLightboxIndex(i)}
             >
               <motion.img
@@ -82,6 +87,7 @@ const GallerySection = () => {
                 whileInView={{ filter: "blur(0px)" }}
                 transition={{ duration: 0.8 }}
                 className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                style={{ willChange: "filter" }}
               />
 
               {/* Hover overlay */}

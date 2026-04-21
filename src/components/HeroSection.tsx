@@ -34,18 +34,25 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
           {t("togetherWithFamilies")}
         </motion.p>
-        <motion.h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-none tracking-tight"
-          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.6 }}>
-          {t("groomName")}
+        
+        <motion.h1 
+          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 30 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1.2, delay: 0.6 }}
+        >
+          <span className="font-heading text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-tight tracking-tight px-2">
+            {t("groomName")}
+          </span>
+          <motion.span className="my-2 text-primary text-2xl sm:text-3xl font-heading italic"
+            initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 1 }}>
+            &
+          </motion.span>
+          <span className="font-heading text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-tight tracking-tight px-2">
+            {t("brideName")}
+          </span>
         </motion.h1>
-        <motion.div className="my-4 text-primary text-3xl font-heading italic"
-          initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 1 }}>
-          &
-        </motion.div>
-        <motion.h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground leading-none tracking-tight"
-          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, delay: 0.9 }}>
-          {t("brideName")}
-        </motion.h1>
+
         <motion.p className="mt-8 text-base tracking-[0.2em] text-foreground font-body font-light"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }}>
           {t("heroDate")}
