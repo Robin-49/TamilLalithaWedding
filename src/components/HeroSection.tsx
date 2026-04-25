@@ -30,7 +30,7 @@ const HeroSection = () => {
       </div>
 
       <motion.div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center" style={{ y: textY, opacity }}>
-        <motion.p className="text-sm tracking-[0.3em] uppercase text-foreground font-light mb-6"
+        <motion.p className="text-sm tracking-[0.3em] uppercase text-foreground font-medium mb-6"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
           {t("togetherWithFamilies")}
         </motion.p>

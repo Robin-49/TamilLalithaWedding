@@ -5,7 +5,7 @@ A modern, responsive, and multilingual (English & Tamil) wedding invitation webs
 ## Features
 - ✨ **Bilingual Support**: Toggle between English and Tamil seamlessly.
 - ⏳ **Countdown**: Live countdown to the big day.
-- 💒 **Event Details**: Unified section for Reception and Muhurtam with venue locations.
+- 💒 **Event Details**: Unified section for Reception and MUHURTHAM with venue locations.
 - 📅 **Add to Calendar**: Cross-platform support (iOS/Android/Desktop) for event reminders.
 - 📸 **Pinterest Gallery**: A beautiful masonry layout for pre-wedding photos.
 - 🎶 **Background Music**: Local instrumental playback (Jinguchaa Instrumental).

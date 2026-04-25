@@ -148,7 +148,7 @@ const EventsSection = () => {
           </button>
         </motion.div>
 
-        {/* Muhurtam / Wedding Card */}
+        {/* MUHURTHAM / Wedding Card */}
         <motion.div
           className="bg-card/40 backdrop-blur-md border border-primary/20 rounded-2xl p-8 md:p-10 shadow-sm flex flex-col gap-6"
           initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.6 }}>
@@ -187,12 +187,12 @@ const EventsSection = () => {
           <button
             onClick={() =>
               handleAddToCalendar(
-                "Tamilarasan & Lalitha — Wedding Muhurtam",
+                "Tamilarasan & Lalitha — Wedding MUHURTHAM",
                 "20260604T020000", // 7:30 AM IST = 2:00 UTC
                 "20260604T033000", // 9:00 AM IST = 3:30 UTC
                 "20260604T020000Z",
                 "20260604T033000Z",
-                `Wedding Muhurtam at ${VENUE_NAME}, ${VENUE_ADDRESS}`
+                `Wedding MUHURTHAM at ${VENUE_NAME}, ${VENUE_ADDRESS}`
               )
             }
             className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl border border-plum/40 text-plum hover:bg-plum/10 text-xs tracking-[0.2em] uppercase font-body transition-colors font-medium"
